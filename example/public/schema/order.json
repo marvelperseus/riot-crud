@@ -1,0 +1,53 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "title": "Orders",
+  "properties": {
+    "_id": {
+      "type": "string"
+    },
+    "orderId": {
+      "type": "number"
+    },
+    "total": {
+      "type": "number"
+    },
+    "name": {
+      "type": "string"
+    },
+    "url": {
+      "type": "string"
+    },
+    "image": {
+      "type": "string",
+      "links": [
+              {
+                "href": "https://www.medic-world.com/img/130x130/{self}",
+                "mediaType": "image/*"
+              }
+            ]
+    },
+    "comment": {
+      "type": "string",
+      "format": "html",
+          "options": {
+          "wysiwyg": true
+      }
+    },
+    "createdAt": {
+      "type": "string",
+      "format": "datetime-local"
+    },
+    "updatedAt": {
+      "type": "string",
+      "format": "datetime-local"
+    }
+  },
+  "required": [
+    "_id",
+    "name",
+    "comment",
+    "createdAt",
+    "updatedAt"
+  ]
+}
